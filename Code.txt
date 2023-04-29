@@ -1,0 +1,11 @@
+Sub RoundedRectangle1_Click()
+    For Each Object In Sheets
+        Dim Value1, Value2 As String
+        Value1 = Object.Name
+        Value2 = Trim(UCase(Worksheets("DISEASES").[H4].Value))
+        If InStr(Value1, Value2) Then
+            Object.Activate
+            Exit Sub
+        End If
+    Next
+End Sub
